@@ -3,7 +3,7 @@ require "../src/qrencode"
 # ansiqr.cr: Given an input string, render it as a QR code using ANSI terminal colors
 # Usage: ansiqr <input>
 
-input = ARGV[0] * 1000
+input = ARGV[0]
 
 qr = QRencode::QRcode.new(input)
 qr.each_row do |row|
