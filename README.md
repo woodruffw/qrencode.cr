@@ -1,5 +1,7 @@
 # qrencode
 
+[![Build Status](https://travis-ci.org/woodruffw/qrencode.cr.svg?branch=master)](https://travis-ci.org/woodruffw/qrencode.cr)
+
 Crystal bindings for [libqrencode](https://fukuchi.org/works/qrencode/index.html.en).
 
 ## Installation
