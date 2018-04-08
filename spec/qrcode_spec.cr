@@ -1,3 +1,5 @@
+require "./spec_helper"
+
 describe QRencode::QRcode do
   describe "#initialize" do
     it "accepts a string" do
