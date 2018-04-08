@@ -1,0 +1,9 @@
+name: qrencode
+version: 0.1.0
+
+authors:
+  - William Woodruff <william@yossarian.net>
+
+crystal: 0.24.2
+
+license: MIT
