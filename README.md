@@ -14,6 +14,12 @@ dependencies:
     github: woodruffw/qrencode.cr
 ```
 
+`libqrencode` is required. On Debian-based systems, it can be installed via:
+
+```bash
+$ sudo apt install libqrencode-dev
+```
+
 ## Usage
 
 QRencode provides methods for generating a QR symbol from various inputs (ASCII/UTF8 text, numerics,
