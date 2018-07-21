@@ -12,6 +12,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   qrencode:
     github: woodruffw/qrencode.cr
+    branch: master
 ```
 
 `libqrencode` is required. On Debian-based systems, it can be installed via:
