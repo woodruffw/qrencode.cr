@@ -38,9 +38,6 @@ module QRencode
     # ```
     def initialize(string : String, version = 0, level = ECLevel::MEDIUM,
                    hint = EncodeMode::MODE_8, casesensitive = true, micro = false)
-      # XXX: Replace this when Bool.to_unsafe lands
-      casesensitive = casesensitive ? 1 : 0
-
       @qrcode_p = if micro
                     LibQRencode.encode_string_mqr(string, version, level, hint, casesensitive)
                   else
