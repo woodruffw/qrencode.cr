@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: deps
+        run: |
+          curl -sL "https://keybase.io/crystal/pgp_keys.asc" | sudo apt-key add -
+          echo "deb https://dist.crystal-lang.org/apt crystal main" | sudo tee /etc/apt/sources.list.d/crystal.list
+          sudo apt-get update
+          sudo apt install -y crystal libqrencode-dev
+      - name: lint
+        run: crystal tool format --check src/ spec/
+      - name: build
+        run: shards build --production
+      - name: test
+        run: crystal spec
