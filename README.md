@@ -1,6 +1,6 @@
 # qrencode
 
-[![Build Status](https://travis-ci.org/woodruffw/qrencode.cr.svg?branch=master)](https://travis-ci.org/woodruffw/qrencode.cr)
+[![Build Status](https://img.shields.io/github/workflow/status/woodruffw/qrencode.cr/CI/master)](https://github.com/woodruffw/qrencode.cr/actions?query=workflow%3ACI)
 
 Crystal bindings for [libqrencode](https://fukuchi.org/works/qrencode/index.html.en).
 
