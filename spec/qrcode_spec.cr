@@ -13,17 +13,17 @@ describe QRencode::QRcode do
     end
 
     it "fails when given a bad version" do
-      expect_raises Errno, "failed to generate qr code" do
+      expect_raises QRencode::EncodeError, "failed to generate qr code" do
         QRencode::QRcode.new("foobar", version: 100)
       end
     end
 
     it "fails when given a huge input" do
-      expect_raises Errno, "failed to generate qr code" do
+      expect_raises QRencode::EncodeError, "failed to generate qr code" do
         QRencode::QRcode.new("foobar" * 1024)
       end
 
-      expect_raises Errno, "failed to generate qr code" do
+      expect_raises QRencode::EncodeError, "failed to generate qr code" do
         QRencode::QRcode.new(("foobar" * 1024).to_slice)
       end
     end

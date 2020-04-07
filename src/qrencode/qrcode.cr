@@ -1,4 +1,8 @@
 module QRencode
+  class EncodeError < Exception
+    include SystemError
+  end
+
   # The main class for QR symbol generation.
   class QRcode
     private getter qrcode_p : LibQRencode::QRcode*
@@ -44,7 +48,7 @@ module QRencode
                     LibQRencode.encode_string(string, version, level, hint, casesensitive)
                   end
 
-      raise Errno.new("failed to generate qr code") if @qrcode_p.null?
+      raise EncodeError.from_errno("failed to generate qr code") if @qrcode_p.null?
 
       @version = qrcode_p.value.version
       @width = qrcode_p.value.width
@@ -61,7 +65,7 @@ module QRencode
                     LibQRencode.encode_data(data.size, data, version, level)
                   end
 
-      raise Errno.new("failed to generate qr code") if @qrcode_p.null?
+      raise EncodeError.from_errno("failed to generate qr code") if @qrcode_p.null?
 
       @version = qrcode_p.value.version
       @width = qrcode_p.value.width
