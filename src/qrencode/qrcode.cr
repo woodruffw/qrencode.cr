@@ -1,4 +1,5 @@
 module QRencode
+  # Raised on `QRcode` initialization failure.
   class EncodeError < Exception
     include SystemError
   end
@@ -30,7 +31,7 @@ module QRencode
     #
     # If *micro* is set to `true`, then a Micro QR code is generated instead (experimental).
     #
-    # Raises `Errno` on any of the following failure conditions:
+    # Raises `EncodeError` on any of the following failure conditions:
     # * The given *string* is invalid given *hint* (`EINVAL`)
     # * Memory allocation fails (`ENOMEM`)
     # * The given *string* is too large to fit into a QR code (`ERANGE`)
