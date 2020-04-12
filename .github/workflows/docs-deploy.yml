@@ -1,0 +1,33 @@
+name: docs-deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: deps
+        run: |
+          sudo apt-get update
+          curl -sL "https://keybase.io/crystal/pgp_keys.asc" | sudo apt-key add -
+          echo "deb https://dist.crystal-lang.org/apt crystal main" | sudo tee /etc/apt/sources.list.d/crystal.list
+          sudo apt-get update
+          sudo apt install -y crystal
+
+      - name: docs
+        run: crystal doc
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3.5.6
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          force_orphan: true
