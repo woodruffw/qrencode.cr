@@ -24,7 +24,7 @@ $ sudo apt install libqrencode-dev
 
 ## Usage
 
-QRencode provides methods for generating a QR symbol from various inputs (ASCII/UTF8 text, numerics,
+`QRencode` provides methods for generating a QR symbol from various inputs (ASCII/UTF8 text, numerics,
 Kanji (shift-JIS), etc).
 
 It does *not* perform the task of rendering QR symbol data to an image format (e.g., PNG) -- it's
