@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="qrencode">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="qrencode">
+  <title>QRencode::EncodeMode - qrencode master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          qrencode
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="qrencode/QRencode" data-name="qrencode">
+      <a href="../QRencode.html">QRencode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="qrencode/QRencode/ECLevel" data-name="qrencode::eclevel">
+      <a href="../QRencode/ECLevel.html">ECLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/EncodeError" data-name="qrencode::encodeerror">
+      <a href="../QRencode/EncodeError.html">EncodeError</a>
+      
+    </li>
+  
+  <li class=" current" data-id="qrencode/QRencode/EncodeMode" data-name="qrencode::encodemode">
+      <a href="../QRencode/EncodeMode.html">EncodeMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/QRcode" data-name="qrencode::qrcode">
+      <a href="../QRencode/QRcode.html">QRcode</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/Util" data-name="qrencode::util">
+      <a href="../QRencode/Util.html">Util</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> QRencode::EncodeMode
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Encoding modes for QR symbol generation.</p>
+
+<p><span class="flag purple">NOTE</span>  <code>QR_MODE_NUL</code> and <code>QR_MODE_STRUCTURE</code> are for internal use only.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L12" target="_blank">
+        qrencode/enums.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="MODE_NUL">
+        <strong>MODE_NUL</strong> = <code><span class="n">-1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_NUM">
+        <strong>MODE_NUM</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_AN">
+        <strong>MODE_AN</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_8">
+        <strong>MODE_8</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_KANJI">
+        <strong>MODE_KANJI</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_STRUCTURE">
+        <strong>MODE_STRUCTURE</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_ECI">
+        <strong>MODE_ECI</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_FNC1FIRST">
+        <strong>MODE_FNC1FIRST</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MODE_FNC1SECOND">
+        <strong>MODE_FNC1SECOND</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#mode_8?-instance-method" class="signature"><strong>#mode_8?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_an?-instance-method" class="signature"><strong>#mode_an?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_eci?-instance-method" class="signature"><strong>#mode_eci?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_fnc1_first?-instance-method" class="signature"><strong>#mode_fnc1_first?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_fnc1_second?-instance-method" class="signature"><strong>#mode_fnc1_second?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_kanji?-instance-method" class="signature"><strong>#mode_kanji?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_nul?-instance-method" class="signature"><strong>#mode_nul?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_num?-instance-method" class="signature"><strong>#mode_num?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mode_structure?-instance-method" class="signature"><strong>#mode_structure?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="mode_8?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_8?</strong>
+
+        <a class="method-permalink" href="#mode_8?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_an?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_an?</strong>
+
+        <a class="method-permalink" href="#mode_an?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_eci?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_eci?</strong>
+
+        <a class="method-permalink" href="#mode_eci?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_fnc1_first?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_fnc1_first?</strong>
+
+        <a class="method-permalink" href="#mode_fnc1_first?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_fnc1_second?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_fnc1_second?</strong>
+
+        <a class="method-permalink" href="#mode_fnc1_second?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_kanji?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_kanji?</strong>
+
+        <a class="method-permalink" href="#mode_kanji?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_nul?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_nul?</strong>
+
+        <a class="method-permalink" href="#mode_nul?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_num?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_num?</strong>
+
+        <a class="method-permalink" href="#mode_num?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mode_structure?-instance-method">
+      <div class="signature">
+        
+        def <strong>mode_structure?</strong>
+
+        <a class="method-permalink" href="#mode_structure?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/enums.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

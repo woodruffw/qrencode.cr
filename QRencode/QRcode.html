@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="qrencode">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="qrencode">
+  <title>QRencode::QRcode - qrencode master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          qrencode
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="qrencode/QRencode" data-name="qrencode">
+      <a href="../QRencode.html">QRencode</a>
+      
+        <ul>
+  
+  <li class=" " data-id="qrencode/QRencode/ECLevel" data-name="qrencode::eclevel">
+      <a href="../QRencode/ECLevel.html">ECLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/EncodeError" data-name="qrencode::encodeerror">
+      <a href="../QRencode/EncodeError.html">EncodeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/EncodeMode" data-name="qrencode::encodemode">
+      <a href="../QRencode/EncodeMode.html">EncodeMode</a>
+      
+    </li>
+  
+  <li class=" current" data-id="qrencode/QRencode/QRcode" data-name="qrencode::qrcode">
+      <a href="../QRencode/QRcode.html">QRcode</a>
+      
+    </li>
+  
+  <li class=" " data-id="qrencode/QRencode/Util" data-name="qrencode::util">
+      <a href="../QRencode/Util.html">Util</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> QRencode::QRcode
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../QRencode/QRcode.html">QRencode::QRcode</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The main class for QR symbol generation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L8" target="_blank">
+        qrencode/qrcode.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(string:String,version=0,level=ECLevel::MEDIUM,hint=EncodeMode::MODE_8,casesensitive=true,micro=false)-class-method" class="signature"><strong>.new</strong>(string : String, version = <span class="n">0</span>, level = <span class="t">ECLevel</span><span class="t">::</span><span class="t">MEDIUM</span>, hint = <span class="t">EncodeMode</span><span class="t">::</span><span class="t">MODE_8</span>, casesensitive = <span class="n">true</span>, micro = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../QRencode/QRcode.html">QRcode</a></code> instance from <em>string</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(data:Bytes,version=0,level=ECLevel::MEDIUM,micro=false)-class-method" class="signature"><strong>.new</strong>(data : Bytes, version = <span class="n">0</span>, level = <span class="t">ECLevel</span><span class="t">::</span><span class="t">MEDIUM</span>, micro = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../QRencode/QRcode.html">QRcode</a></code> instance from <em>data</em>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#data:Bytes-instance-method" class="signature"><strong>#data</strong> : Bytes</a>
+        
+          <div class="summary"><p>The actual module (dot) data of the QR symbol.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_row(&)-instance-method" class="signature"><strong>#each_row</strong>(&)</a>
+        
+          <div class="summary"><p>Yields each row in <code><a href="../QRencode/QRcode.html#data:Bytes-instance-method">#data</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Destroys the instance's internal state.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#version:Int32-instance-method" class="signature"><strong>#version</strong> : Int32</a>
+        
+          <div class="summary"><p>The version of the QR symbol.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        
+          <div class="summary"><p>The width of the QR symbol.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(string:String,version=0,level=ECLevel::MEDIUM,hint=EncodeMode::MODE_8,casesensitive=true,micro=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(string : String, version = <span class="n">0</span>, level = <span class="t">ECLevel</span><span class="t">::</span><span class="t">MEDIUM</span>, hint = <span class="t">EncodeMode</span><span class="t">::</span><span class="t">MODE_8</span>, casesensitive = <span class="n">true</span>, micro = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#new(string:String,version=0,level=ECLevel::MEDIUM,hint=EncodeMode::MODE_8,casesensitive=true,micro=false)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new <code><a href="../QRencode/QRcode.html">QRcode</a></code> instance from <em>string</em>.</p>
+
+<p><em>version</em> is a QR version code. If <code>0</code> (the default) is given, then <code>libqrencode</code> chooses
+the minimum possible version.</p>
+
+<p><em>level</em> is an <code><a href="../QRencode/ECLevel.html">ECLevel</a></code> value, corresponding to the level of error-correction to apply.</p>
+
+<p><em>hint</em> is an <code><a href="../QRencode/EncodeMode.html">EncodeMode</a></code> value, corresponding to the encoding used by the QR code.</p>
+
+<p>If <em>casesensitive</em> is set to <code>false</code>, then the data is encoded in all caps (as applies).</p>
+
+<p>If <em>micro</em> is set to <code>true</code>, then a Micro QR code is generated instead (experimental).</p>
+
+<p>Raises <code><a href="../QRencode/EncodeError.html">EncodeError</a></code> on any of the following failure conditions:</p>
+
+<ul><li>The given <em>string</em> is invalid given <em>hint</em> (<code>EINVAL</code>)</li><li>Memory allocation fails (<code>ENOMEM</code>)</li><li>The given <em>string</em> is too large to fit into a QR code (<code>ERANGE</code>)</li></ul>
+
+<pre><code>qr <span class="o">=</span> <span class="t">QRencode</span><span class="t">::</span><span class="t">QRcode</span>.<span class="k">new</span>(<span class="s">&quot;hello&quot;</span>)
+<span class="c"># Crystal strings are UTF-8, so this works without `EncodeMode::MODE_KANJI`!</span>
+qr2 <span class="o">=</span> <span class="t">QRencode</span><span class="t">::</span><span class="t">QRcode</span>.<span class="k">new</span>(<span class="s">&quot;こんにちは&quot;</span>)</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(data:Bytes,version=0,level=ECLevel::MEDIUM,micro=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(data : Bytes, version = <span class="n">0</span>, level = <span class="t">ECLevel</span><span class="t">::</span><span class="t">MEDIUM</span>, micro = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#new(data:Bytes,version=0,level=ECLevel::MEDIUM,micro=false)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new <code><a href="../QRencode/QRcode.html">QRcode</a></code> instance from <em>data</em>.</p>
+
+<p>Always uses <code><a href="../QRencode/EncodeMode.html#MODE_8">EncodeMode::MODE_8</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="data:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>data</strong> : Bytes
+
+        <a class="method-permalink" href="#data:Bytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The actual module (dot) data of the QR symbol. <code><a href="../QRencode/Util.html">Util</a></code> contains methods for interacting
+with these bytes.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_row(&)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_row</strong>(&)
+
+        <a class="method-permalink" href="#each_row(&)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Yields each row in <code><a href="../QRencode/QRcode.html#data:Bytes-instance-method">#data</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Destroys the instance's internal state.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="version:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>version</strong> : Int32
+
+        <a class="method-permalink" href="#version:Int32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The version of the QR symbol.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="width:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>width</strong> : Int32
+
+        <a class="method-permalink" href="#width:Int32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>The width of the QR symbol.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/woodruffw/qrencode.cr/blob/0b58b7cb7443f4874b78993c090caf8a1d03b3a9/src/qrencode/qrcode.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
