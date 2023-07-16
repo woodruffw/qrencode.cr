@@ -1,6 +1,8 @@
 qrencode.cr
 ===========
 
+[![CI](https://github.com/woodruffw/qrencode.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/woodruffw/qrencode.cr/actions/workflows/ci.yml)
+
 Crystal bindings for [libqrencode](https://fukuchi.org/works/qrencode/index.html.en).
 
 ## Installation
